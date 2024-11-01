@@ -1,0 +1,13 @@
+<!DOC TYPE HTMI>
+<html lang="ko">
+<head>
+<title>커피그림클릭</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>커피그림클릭</h1>
+<a href ="커피커피.html"><img src="images/coffee4.gif" art="라떼이미지"></a>
+<address>현아주소</address>
+</body>
+
+</html> 
