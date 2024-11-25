@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://codingand.dothome.co.kr/hyundai/#s1 -->
+<html lang="en" class="-webkit- fp-enabled" style="overflow: hidden; height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>현대자동차</title>
+   <style media="" data-href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.css">/*!
+ * fullPage 3.0.5
+ * https://github.com/alvarotrigo/fullPage.js
+ *
+ * @license GPLv3 for open source use only
+ * or Fullpage Commercial License for commercial use
+ * http://alvarotrigo.com/fullPage/pricing/
+ *
+ * Copyright (C) 2018 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
+ */
+html.fp-enabled,
+.fp-enabled body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+.fp-slide {
+    float: left;
+}
+.fp-slide, .fp-slidesContainer {
+    height: 100%;
+    display: block;
+}
+.fp-slides {
+    z-index:1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+    transition: all 0.3s ease-out;
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+.fp-controlArrow {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #fff transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #fff;
+}
+.fp-scrollable {
+    overflow: hidden;
+    position: relative;
+}
+.fp-scroller{
+    overflow: hidden;
+}
+.iScrollIndicator{
+    border: 0 !important;
+}
+.fp-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+}
+#fp-nav.fp-right {
+    right: 17px;
+}
+#fp-nav.fp-left {
+    left: 17px;
+}
+.fp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    left: 0 !important;
+    right: 0;
+    margin: 0 auto !important;
+}
+.fp-slidesNav.fp-bottom {
+    bottom: 17px;
+}
+.fp-slidesNav.fp-top {
+    top: 17px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+ }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: #fff;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.fp-right {
+    right: 20px;
+}
+#fp-nav ul li .fp-tooltip.fp-left {
+    left: 20px;
+}
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell{
+    height: auto !important;
+}
+
+.fp-responsive .fp-auto-height-responsive.fp-section,
+.fp-responsive .fp-auto-height-responsive .fp-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+    height: auto !important;
+}
+
+/*Only display content to screen readers*/
+.fp-sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}</style>
+   <style media="" data-href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+ul.bxslider {
+  list-style: none;
+}
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+/** THEME
+===================================*/
+.bx-wrapper {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 5px solid #fff;
+  background: #fff;
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+/* LOADER */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url("https://cdn.jsdelivr.net/bxslider/4.2.12/images/bx_loader.gif") center center no-repeat #ffffff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+/* PAGER */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #000;
+}
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+.bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url("https://cdn.jsdelivr.net/bxslider/4.2.12/images/controls.png") no-repeat 0 -32px;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  background-position: 0 0;
+}
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url("https://cdn.jsdelivr.net/bxslider/4.2.12/images/controls.png") no-repeat -43px -32px;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: -43px 0;
+}
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url("https://cdn.jsdelivr.net/bxslider/4.2.12/images/controls.png") -86px -11px no-repeat;
+  margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+  background-position: -86px 0;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url("https://cdn.jsdelivr.net/bxslider/4.2.12/images/controls.png") -86px -44px no-repeat;
+  margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus {
+  background-position: -86px -33px;
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+</style>
+   <style media="" data-href="css/style.css">@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* default.css */
+* {margin:0; padding:0;}
+a {text-decoration:none;}
+li {list-style: none;}
+img {border: none; vertical-align: top; width:100%; height:auto;}
+
+body {font-family:Arial, '맑은 고딕', Helvetica, sans-serif; font-size:12px;}
+
+/* 로고 */
+.logo {font-size:40px; position:fixed; z-index:99; left:60px; top:60px; width:350px; color:#fff; background:url("http://codingand.dothome.co.kr/hyundai/css/../images/logo.png") no-repeat 10px 3px;}
+
+/* GNB */
+#menu {position:fixed; z-index:99; right:0; top:0;}
+#menu li {display:inline-block;}
+#menu a {position:relative; top:5px; color:#111; background:#fff; padding:20px 20px 10px; border-radius:0 0 10px 10px; transition:.3s;}
+#menu li.active a {color:#fff; background:#002c52;}
+#menu a:hover {top:10px;}
+
+/* 오른쪽 페이저 버튼 색 */
+#fp-nav ul li a span {background:#ccc; color:black;}
+/* 오른쪽 페이저 툴립 글자 색 */
+#fp-nav ul li .fp-tooltip {color:#ccc;}
+
+/* 전체 섹션 */
+h1 {text-align:center; font-size:3rem;}
+p {text-align:center; font-size:1rem; margin-top:30px;}
+.section {font-family: 'Lato', sans-serif; color:#fff;}
+.fp-tableCell {text-align:center;}
+
+/* 1 페이지 - 회사소개 */
+/* 비디오 */
+#vid {position:absolute; width:100%; z-index:-1; left:0; top:-80px;}
+#vid video {width:100%; min-width:1600px; object-fit: cover;}
+
+/* 타이틀 */
+.s1 h1 {font-size:70px;}
+.s1 h2 {font-size:20px; margin:10px 0 60px;}
+.s1 p a {display:inline-block; font-size:18px; color:#fff; text-decoration:none; border:2px solid #fff; width:150px; height:50px; text-align:center; line-height:46px;}
+.s1 p a:first-of-type {margin-right:20px;}
+.s1 p a:hover {background:#fff; color:#232323; font-weight:bold;}
+.s1 {text-align:center;}
+.s1 .title {display:inline-block; vertical-align:middle;}
+.s1:after {display:inline-block; content:""; height:900px; vertical-align:middle;}
+
+/* 2 페이지 - 전체모델 */
+.s2 h1 {color:#333;}
+.s2 p {color:#555;}
+.s2 #tab_wrap {height:400px; background:rgba(0,0,0,0.5);}
+.s2 #tab{width:1600px; margin:80px auto}
+.s2 #tab>ul>li{display:inline-block; width:150px; height:50px; line-height:50px; margin-bottom:30px; background:#444; text-align:center; color:#8f8e8f; cursor:pointer;  font-size:1rem; color:#fff; margin-right:-3px;}
+.s2 #tab>ul>li:first-of-type {background-color:#fff; color:#444;}
+
+.s2 #tab div{display:none;}
+.s2 #tab div ul{height:400px}
+.s2 #tab div li{position:relative; display:inline-block; width:285px; height:270px; box-sizing:border-box; border:1px solid #ccc; margin:0 10px; background:no-repeat 50% 50%/80%;}
+.s2 #tab div:nth-of-type(1) {display:block}
+.s2 #tab #t1 li:nth-of-type(1){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/ioniq.png");}
+.s2 #tab #t1 li:nth-of-type(2){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/ioniq-electric.png");}
+.s2 #tab #t1 li:nth-of-type(3){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/ioniq-hybrid.png");}
+.s2 #tab #t1 li:nth-of-type(4){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/i30.png");}
+.s2 #tab #t2 li:nth-of-type(1){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/notice_03.png");}
+.s2 #tab #t2 li:nth-of-type(2){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/notice_05.png");}
+.s2 #tab #t2 li:nth-of-type(3){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/notice_07.png");}
+.s2 #tab #t2 li:nth-of-type(4){background-image:url("http://codingand.dothome.co.kr/hyundai/css/../images/notice_09.png");}
+
+/* 전체모델 - 텍스트 */
+.s2 #tab div li span {position:absolute; left:0; top:0; padding:8px 20px; background:#006992;}
+.s2 #tab div li b {position:absolute; left:50%; transform:translateX(-50%); bottom:20px; font-size:1.2rem;}
+
+
+/* 3 페이지 - 이벤트 */
+.s3 .fp-tableCell {vertical-align:top;}
+.s3 h1 {position:relative; left:50%; transform:translateX(-50%); top:120px; margin-top:50px;}
+.s3 p {position:relative; left:50%; transform:translateX(-50%); top:100px;}
+
+.s3 #slide {position:relative; text-align:center; width:1200px; height:488px; margin:150px auto; overflow:hidden;}
+.s3 #slide .slide img {width:738px;}
+
+/* 슬라이드 페이저 버튼 위치, 색 */
+.fp-slidesNav ul {text-align:center; margin-bottom:70px;}
+.fp-slidesNav ul li a span {background:#fff; border-radius:0 !important;}
+/* 슬라이드 좌우 버튼 위치 */
+.fp-controlArrow {width:25px; height:25px; padding:7px;}
+.fp-controlArrow.fp-prev {border-width:0; width:25px; left:0px; background:rgba(0,0,0,0.3) url("http://codingand.dothome.co.kr/hyundai/css/../images/ico.png") no-repeat -3px -380px; border-color:transparent; transition:.3s; transform:rotate(180deg);}
+.fp-controlArrow.fp-next {position:absolute; border-width:0; right:0px; background:rgba(0,0,0,0.3) url("http://codingand.dothome.co.kr/hyundai/css/../images/ico.png") no-repeat -3px -380px; border-color:transparent; transition:.3s;}
+.fp-controlArrow.fp-prev:hover {background-color:rgba(0,0,0,0.6);}
+.fp-controlArrow.fp-next:hover {background-color:rgba(0,0,0,0.6);}
+
+/* 이벤트 텍스트 */
+.s3 .slide .event_txt {display:inline-block; width:462px; height:489px; background:#f6f3f2; margin-left:-3px; padding:120px 50px 100px 70px; box-sizing:border-box; text-align:left;}
+.s3 .slide .event_txt small {font-size:14px; color:#626262;}
+.s3 .slide .event_txt h2 {font-size:26px; color:#111; margin:20px 0 100px 0;}
+
+/* 이벤트 버튼 */
+.s3 .slide .event_txt a {text-decoration:none; color:#fff; background:#002c52; padding:15px 30px; font-size:14px;}
+
+/* 4 페이지 - 고객서비스 */
+.s4 h1 {position:absolute; left:50%; transform:translateX(-50%); top:170px;}
+.s4 .login a {display:inline-block; margin:0 10px; width:150px; color:#fff; background:#002c52; padding:15px 0px; font-size:14px;}
+
+/* 슬라이드이미지 */
+div.bx-wrapper {border: none; background:transparent; margin-top:50px;}
+#mainImg {position:relative; width:1200px; margin:0 auto; text-align:left; font-size:1rem;}
+
+/* 좌우 버튼 */
+#mainImg .btn {position:absolute; top:50%; transform:translateY(-50%); font-size:5em; color:#fff;}
+#mainImg .pBtn {left:20px;}
+#mainImg .nBtn {right:20px;}
+
+/* 페이저 */
+#mainImg .pager {position:absolute; left:0; bottom:5%; width:100%; text-align:center;}
+#mainImg .pager li {display:inline-block; background:#ccc; width:7px; height:7px; margin:0 5px; border-radius:7px; cursor:pointer; transition:.3s;}
+#mainImg .pager li.active {background:#002c52; width:30px;}
+</style>
+   <script src="./script_files/jquery.min.js.다운로드"></script>
+   <script src="./script_files/jquery-ui.min.js.다운로드"></script>
+   <script src="./script_files/fullpage.js.다운로드"></script>
+   <script src="./script_files/jquery.bxslider.min.js.다운로드"></script>
+   <script src="./script_files/prefixfree.min.js.다운로드"></script>
+   <script src="./script_files/script.js.다운로드"></script>
+</head>
+
+<body style="overflow: hidden; height: 100%;" class="fp-viewing-s1">
+   <div id="wrap" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: 700ms;">
+      <!-- 로고 & GNB -->
+      
+
+      <!-- 4개의 페이지 -->
+      <!-- 첫 번째 섹션 -->
+      <div class="section s1 fp-section fp-table active fp-completely" data-anchor="s1" data-fp-styles="null" style="height: 919px; background-color: transparent;"><div class="fp-tableCell" style="height: 919px;">
+         <div class="title">
+            <h1>GENESIS Experience</h1>
+            <h2>6박 7일간 제네시스를 만나는 기회, 지금 신청하세요.</h2>
+            <p><a href="http://codingand.dothome.co.kr/hyundai/#">신청하기</a><a href="http://codingand.dothome.co.kr/hyundai/#">뉴스확인하기</a></p>
+         </div>
+         <div id="vid">
+            <video autoplay="" loop="" muted="">
+               <source src="video/v2.mp4" type="video/mp4">
+            </video>
+         </div>
+      </div></div>
+
+      <!-- 2 번째 섹션 -->
+      <div class="section s2 fp-section fp-table" data-anchor="s2" data-fp-styles="null" style="height: 919px; background-color: rgb(238, 238, 238);"><div class="fp-tableCell" style="height: 919px;">
+         <h1>All Model</h1>
+         <p>현대 자동차의 전체 차종을 한눈에 볼 수 있습니다.</p>
+         <div id="tab_wrap">
+            <div id="tab">
+               <ul>
+                  <li>전체모델</li>
+                  <li>인기모델</li>
+                  <li>승용</li>
+                  <li>SUV</li>
+                  <li>MPV</li>
+                  <li>친환경</li>
+                  <li>소형상용</li>
+               </ul>
+               <div id="t1">
+                  <ul>
+                     <li><span>인기모델</span><b>아이오닉</b></li>
+                     <li><span>인기모델</span><b>아이오닉 Electric</b></li>
+                     <li><span>인기모델</span><b>아이오닉 Hybird</b></li>
+                     <li><span>인기모델</span><b>i30</b></li>
+                  </ul>
+               </div>
+               <div id="t2">
+                  <ul>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                  </ul>
+               </div>
+               <div id="t3">
+                  <ul>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                  </ul>
+               </div>
+               <div id="t4">
+                  <ul>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                  </ul>
+               </div>
+               <div id="t5">
+                  <ul>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                  </ul>
+               </div>
+               <div id="t6">
+                  <ul>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                  </ul>
+               </div>
+               <div id="t7">
+                  <ul>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                  </ul>
+               </div>
+            </div> <!-- tab end -->
+         </div> <!-- tab_wrap end -->
+      </div></div>
+
+      <!-- 3 번째 섹션 -->
+      <div class="section s3 fp-section" data-anchor="s3" data-fp-styles="null" style="height: 919px; background-color: cadetblue;">
+         <h1>EVENT</h1>
+         <p style="left: -100px; opacity: 0;">고객님을 위한 스페셜 이벤트는 계속 됩니다. 즐거운 행운과 경품을 만나보세요!</p>
+         <div id="slide">
+            <div class="fp-slides"><div class="fp-slidesContainer" style="width: 500%; transition: 700ms; transform: translate3d(0px, 0px, 0px);"><div class="slide fp-slide fp-table active" data-anchor="slide1" style="width: 20%;"><div class="fp-tableCell" style="height: 919px;">
+               <img src="./script_files/e1.jpg" alt="이벤트1">
+               <div class="event_txt">
+                  <small>현대자동차 전시장/시승센터에 방문해보세요!</small>
+                  <h2>현대자동차 여름맞이 전시장 방문 고객 이벤트</h2>
+                  <a href="http://codingand.dothome.co.kr/hyundai/#">자세히 보기</a>
+               </div>
+            </div></div><div class="slide fp-slide fp-table" data-anchor="slide2" style="width: 20%;"><div class="fp-tableCell" style="height: 919px;">
+               <img src="./script_files/e2.jpg" alt="이벤트2">
+               <div class="event_txt">
+                  <small>고성능 브랜드 N과 캐리비안 베이의 색다른 만남!</small>
+                  <h2>N Blue Circuit in<br>캐리비안 베이</h2>
+                  <a href="http://codingand.dothome.co.kr/hyundai/#">자세히 보기</a>
+               </div>
+            </div></div><div class="slide fp-slide fp-table" data-anchor="slide3" style="width: 20%;"><div class="fp-tableCell" style="height: 919px;">
+               <img src="./script_files/e3.jpg" alt="이벤트3">
+               <div class="event_txt">
+                  <small>여름 휴가 고민하지 마세요.</small>
+                  <h2>블루멤버스 X 하나투어<br> 여름 이벤트</h2>
+                  <a href="http://codingand.dothome.co.kr/hyundai/#">자세히 보기</a>
+               </div>
+            </div></div><div class="slide fp-slide fp-table" data-anchor="slide4" style="width: 20%;"><div class="fp-tableCell" style="height: 919px;">
+               <img src="./script_files/e4.jpg" alt="이벤트4">
+               <div class="event_txt">
+                  <small>6월 푸른 제주신라호텔에서 행복한 추억과 함께<br>이벤트의 주인공이 되어보세요!</small>
+                  <h2>블루멤버스 APP<br>이달의 혜택 리뉴얼 기념<br>고객감사 이벤트</h2>
+                  <a href="http://codingand.dothome.co.kr/hyundai/#">자세히 보기</a>
+               </div>
+            </div></div><div class="slide fp-slide fp-table" data-anchor="slide5" style="width: 20%;"><div class="fp-tableCell" style="height: 919px;">
+               <img src="./script_files/e5.jpg" alt="이벤트5">
+               <div class="event_txt">
+                  <small>신형 쏘나타 LPG 모델 구매하시고 다양한 혜택을<br> 함께 받아가세요!</small>
+                  <h2>현대자동차 X SK충전소<br>신형 쏘나타 LPG 출고<br>고객 이벤트</h2>
+                  <a href="http://codingand.dothome.co.kr/hyundai/#">자세히 보기</a>
+               </div>
+            </div></div></div></div><div class="fp-controlArrow fp-prev" style="display: none;"></div><div class="fp-controlArrow fp-next" style="display: block;"></div>
+            
+            
+            
+            
+         </div>
+      <div class="fp-slidesNav fp-bottom"><ul><li><a href="http://codingand.dothome.co.kr/hyundai/#" class="active"><span class="fp-sr-only">About Hyundai</span><span></span></a></li><li><a href="http://codingand.dothome.co.kr/hyundai/#"><span class="fp-sr-only">Model</span><span></span></a></li><li><a href="http://codingand.dothome.co.kr/hyundai/#"><span class="fp-sr-only">Event</span><span></span></a></li><li><a href="http://codingand.dothome.co.kr/hyundai/#"><span class="fp-sr-only">Customer Service</span><span></span></a></li><li><a href="http://codingand.dothome.co.kr/hyundai/#"><span class="fp-sr-only">Slide 5</span><span></span></a></li></ul></div></div>
+
+      <!-- 네 번째 섹션 -->
+      <div class="section s4 fp-section fp-table" data-anchor="s4" data-fp-styles="null" style="height: 919px; background-color: rgb(204, 204, 204);"><div class="fp-tableCell" style="height: 919px;">
+         <h1>Customer Service</h1>
+         <p>블루멤버스와 함께 현대자동차의 다양한 서비스를 확인하시려면 로그인하세요.</p>
+
+         <div id="mainImg">
+            <div class="bx-wrapper" style="max-width: 1220px;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 266.656px;"><div class="bxslider" style="width: 4215%; position: relative; transition-duration: 0s; transform: translate3d(-1230px, 0px, 0px);"><div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" class="bx-clone" aria-hidden="true"><img src="./script_files/cs2.jpg" alt="블루멤버스 포인트" title="블루멤버스 포인트"><div class="bx-caption"><span>블루멤버스 포인트</span></div></div><div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" class="bx-clone" aria-hidden="true"><img src="./script_files/cs3.jpg" alt="차량관리 서비스" title="차량관리 서비스"><div class="bx-caption"><span>차량관리 서비스</span></div></div><div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" class="bx-clone" aria-hidden="true"><img src="./script_files/cs4.jpg" alt="블루링크" title="블루링크"><div class="bx-caption"><span>블루링크</span></div></div>
+               <div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" aria-hidden="false"><img src="./script_files/cs1.jpg" alt="서비스 네트워크" title="서비스 네트워크"><div class="bx-caption"><span>서비스 네트워크</span></div></div>
+               <div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" aria-hidden="false"><img src="./script_files/cs2.jpg" alt="블루멤버스 포인트" title="블루멤버스 포인트"><div class="bx-caption"><span>블루멤버스 포인트</span></div></div>
+               <div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" aria-hidden="true"><img src="./script_files/cs3.jpg" alt="차량관리 서비스" title="차량관리 서비스"><div class="bx-caption"><span>차량관리 서비스</span></div></div>
+               <div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" aria-hidden="true"><img src="./script_files/cs4.jpg" alt="블루링크" title="블루링크"><div class="bx-caption"><span>블루링크</span></div></div>
+            <div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" class="bx-clone" aria-hidden="true"><img src="./script_files/cs1.jpg" alt="서비스 네트워크" title="서비스 네트워크"><div class="bx-caption"><span>서비스 네트워크</span></div></div><div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" class="bx-clone" aria-hidden="true"><img src="./script_files/cs2.jpg" alt="블루멤버스 포인트" title="블루멤버스 포인트"><div class="bx-caption"><span>블루멤버스 포인트</span></div></div><div style="float: left; list-style: none; position: relative; width: 400px; margin-right: 10px;" class="bx-clone" aria-hidden="true"><img src="./script_files/cs3.jpg" alt="차량관리 서비스" title="차량관리 서비스"><div class="bx-caption"><span>차량관리 서비스</span></div></div></div></div></div>
+            <ul class="pager">
+               <li class="active"></li>
+               <li class=""></li>
+               <li class=""></li>
+               <li class=""></li>
+            </ul>
+            <p><a href="http://codingand.dothome.co.kr/hyundai/#" class="btn pBtn"><img src="./script_files/main_visual_prev.png" alt="이전 버튼"></a></p>
+            <p><a href="http://codingand.dothome.co.kr/hyundai/#" class="btn nBtn"><img src="./script_files/main_visual_next.png" alt="다음 버튼"></a></p>
+         </div>
+
+         <div class="login">
+            <a href="http://codingand.dothome.co.kr/hyundai/#">로그인</a><a href="http://codingand.dothome.co.kr/hyundai/#">회원가입</a>
+         </div>
+      </div></div>
+   </div>
+
+
+<div id="menu">
+         <h1 class="logo">HYUNDAI</h1>
+         <ul>
+            <li data-menuanchor="s1" class="active"><a href="http://codingand.dothome.co.kr/hyundai/#s1">회사소개</a></li>
+            <li data-menuanchor="s2" class=""><a href="http://codingand.dothome.co.kr/hyundai/#s2">전체모델</a></li>
+            <li data-menuanchor="s3" class=""><a href="http://codingand.dothome.co.kr/hyundai/#s3">이벤트</a></li>
+            <li data-menuanchor="s4"><a href="http://codingand.dothome.co.kr/hyundai/#s4">고객서비스</a></li>
+         </ul>
+      </div><div id="fp-nav" class="fp-right fp-show-active" style="margin-top: -43.5px;"><ul><li><a href="http://codingand.dothome.co.kr/hyundai/#s1" class="active"><span class="fp-sr-only">About Hyundai</span><span></span></a><div class="fp-tooltip fp-right">About Hyundai</div></li><li><a href="http://codingand.dothome.co.kr/hyundai/#s2" class=""><span class="fp-sr-only">Model</span><span></span></a><div class="fp-tooltip fp-right">Model</div></li><li><a href="http://codingand.dothome.co.kr/hyundai/#s3" class=""><span class="fp-sr-only">Event</span><span></span></a><div class="fp-tooltip fp-right">Event</div></li><li><a href="http://codingand.dothome.co.kr/hyundai/#s4"><span class="fp-sr-only">Customer Service</span><span></span></a><div class="fp-tooltip fp-right">Customer Service</div></li></ul></div></body></html>
