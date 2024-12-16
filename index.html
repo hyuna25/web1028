@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <href="test.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>개인 사이트</title>
+  <title>백현아</title>
   <style>
     * {box-sizing: border-box;}
     body {margin:0;}
     img {width:100%; vertical-align: top;}
     div {text-align: center;}
+
+    .tablet {display: none;}
+    .desktop {display: none;}
+
+    @media (min-width:576px) {
+      .tablet {display: block;}
+      .phone {display: none;}
+      .desktop {display: none;}
+    }
+    @media (min-width:992px) {
+      .desktop {display: block;}
+      .phone {display: none;}
+      .tablet {display: none;}
+    }
   </style>
 </head>
 <body>
   <div>
-    <a href="90_test/index.html"><img src="컴포넌트.png" alt="홈"></a>
+    <img src="70_pf/my/desktop.png" class="desktop" alt="데스크탑">
+    <img src="70_pf/my/tablet.png" class="tablet" alt="테블릿">
+    <img src="70_pf/my/phone.png" class="phone" alt="폰">
   </div>
 </body>
 </html>
